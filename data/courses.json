@@ -1,0 +1,19 @@
+[
+    {"id":"0001", "courseName":"Accounting"},
+    {"id":"0002", "courseName":"Biology"},
+    {"id":"0003", "courseName":"Chemistry"},
+    {"id":"0004", "courseName":"Design"},
+    {"id":"0005", "courseName":"Engineering"},
+    {"id":"0006", "courseName":"Fine Art"},
+    {"id":"0007", "courseName":"Geography"},
+    {"id":"0008", "courseName":"History"},
+    {"id":"0009", "courseName":"International Studies"},
+    {"id":"0010", "courseName":"Languages"},
+    {"id":"0011", "courseName":"Mathematics"},
+    {"id":"0012", "courseName":"Nursing and Healthcare"},
+    {"id":"0013", "courseName":"Philosophy"},
+    {"id":"0014", "courseName":"Religious Studies"},
+    {"id":"0015", "courseName":"Software Engineering"},
+    {"id":"0016", "courseName":"Textiles"},
+    {"id":"0017", "courseName":"Visual Communications"}
+]
