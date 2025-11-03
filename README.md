@@ -1,3 +1,5 @@
+Student information system
+
 Implement a simple student information system, where the user can:
    - add a new student (basic student information and courses that student will be part of),
    - edit the student (courses only),
