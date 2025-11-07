@@ -1,7 +1,4 @@
-<p>overview works!</p>
-<div *ngFor="let stu of students">{{ stu.name }}</div>
-
-<!--div class="mb-4">
+<div class="mb-4">
     <p-button type="button" icon="pi pi-chevron-left" (click)="prev()" [disabled]="isFirstPage()" text />
     <p-button type="button" icon="pi pi-refresh" (click)="reset()" text />
     <p-button type="button" icon="pi pi-chevron-right" (click)="next()" [disabled]="isLastPage()" text />
@@ -9,8 +6,9 @@
 <p-table
     [value]="students"
     [paginator]="true"
-    [rows]="5"
+    [rows]=rows
     [first]="first"
+    stripedRows
     [showCurrentPageReport]="true"
     [tableStyle]="{ 'min-width': '50rem' }"
     currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
@@ -18,19 +16,33 @@
     [rowsPerPageOptions]="[10, 25, 50]"
 >
     <ng-template #header>
-        <tr>
-            <th style="width:25%">Id</th>
-            <th style="width:25%">Name</th>
-            <th style="width:25%">Surname</th>
-            <th style="width:25%">Courses</th>
+        <tr class="border-round-sm">
+            <th pSortableColumn="id" style="width:25%" class="border-round-sm">
+                Id
+                <p-sortIcon field="Id" class="icons"/>
+            </th>
+            <th pSortableColumn="name" style="width:25%">
+                Name
+                <p-sortIcon field="Name" class="icons" />
+            </th>
+            <th pSortableColumn="surname" style="width:25%">
+                Surname
+                <p-sortIcon field="Surname" class="icons"/>
+            </th>
+            <th pSortableColumn="courses" style="width:25%">
+                Courses
+                <p-sortIcon field="Courses" class="icons"/>
+            </th>
         </tr>
     </ng-template>
-    <ng-template #body let-student>
+    <ng-template #body let-student styleClass="custom-table">
         <tr>
             <td>{{ student.id }}</td>
             <td>{{ student.name }}</td>
             <td>{{ student.surname }}</td>
-            <td>{{ student.courses }}</td>
+            <td>
+                <div *ngFor="let course of student.courses">{{ course.courseName }}</div>
+            </td>
         </tr>
     </ng-template>
     <ng-template #paginatorleft>
@@ -39,4 +51,4 @@
     <ng-template #paginatorright>
         <p-button type="button" icon="pi pi-cloud" text />
     </ng-template>
-</p-table-->
+</p-table>

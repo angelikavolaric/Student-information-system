@@ -1,55 +1,743 @@
- {
-    "students": [
-      {"id":"60b1c1f4e8a4c0000fbbf01d", "name":"John", "surname":"Smith", "courses":["0001", "0003", "0014"]},
-      {"id":"0000fbbf01d60b1c1f4e8a4c", "name":"Marleene", "surname":"Jackobine", "courses":["0002", "0003"]},
-      {"id":"01f4e8a4c000fbbf01d60b1c", "name":"Eliza", "surname":"Varlark", "courses":["0001", "0002", "0012", "0013", "0014", "0015", "0016"]},
-      {"id":"060b1c1f4e8a4000fbbf01dc", "name":"Marco", "surname":"Slavan", "courses":["0007", "0008"]},
-      {"id":"cbbf0100d60b00f4e8a41c1f", "name":"Vera", "surname":"Parsley", "courses":["0011", "0012", "0016"]},
-      {"id":"18a41c0fb0c060b0f01dbf4e", "name":"Percival", "surname":"Merycourt", "courses":["0006", "0008", "0013", "0017"]},
-      {"id":"f4e8a4c060b1c1f4e8a4c001","name":"Alice","surname":"Hamilton","courses":["0001","0005","0010"]},
-      {"id":"b1c1f4e8a4c060b1c1f4e800","name":"Brian","surname":"Kendrick","courses":["0002","0003","0009","0012"]},
-      {"id":"0fbbf01d60b1c1f4e8a4c002","name":"Clara","surname":"Dawson","courses":["0011","0013"]},
-      {"id":"60b1c1f4e8a4c0000fbbf03d","name":"David","surname":"Ellison","courses":["0004","0007","0015"]},
-      {"id":"0000fbbf01d60b1c1f4e8c03","name":"Eva","surname":"Morrison","courses":["0001","0006","0017"]},
-      {"id":"01f4e8a4c000fbbf01d60b4c","name":"Frank","surname":"Reynolds","courses":["0003","0008","0010","0012"]},
-      {"id":"060b1c1f4e8a4000fbbf01dd","name":"Grace","surname":"Sinclair","courses":["0014"]},
-      {"id":"cbbf0100d60b00f4e8a41c2f","name":"Hector","surname":"Vaughn","courses":["0005","0011","0016"]},
-      {"id":"18a41c0fb0c060b0f01dbf5f","name":"Isla","surname":"Whitaker","courses":["0002","0012","0015"]},
-      {"id":"f4e8a4c060b1c1f4e8a4c006","name":"Jack","surname":"Young","courses":["0001","0003","0006","0017"]},
-      {"id":"b1c1f4e8a4c060b1c1f4e809","name":"Kara","surname":"Zimmer","courses":["0007","0010","0014"]},
-      {"id":"0fbbf01d60b1c1f4e8a4c007","name":"Liam","surname":"Benson","courses":["0001","0002","0003","0004","0005"]},
-      {"id":"a1b2c3d4e5f607182930a1b2","name":"Maya","surname":"Harrington","courses":["0002","0005","0010"]},
-      {"id":"b2c3d4e5f607182930a1b2c3","name":"Noah","surname":"Fletcher","courses":["0001","0003"]},
-      {"id":"c3d4e5f607182930a1b2c3d4","name":"Olivia","surname":"Garrison","courses":["0004","0006","0012","0017"]},
-      {"id":"d4e5f607182930a1b2c3d4e5","name":"Patrick","surname":"Holloway","courses":["0001","0008","0011"]},
-      {"id":"e5f607182930a1b2c3d4e5f6","name":"Quinn","surname":"Irving","courses":["0002","0009","0015"]},
-      {"id":"f607182930a1b2c3d4e5f607","name":"Rachel","surname":"Jennings","courses":["0003","0007","0014","0016"]},
-      {"id":"07182930a1b2c3d4e5f60718","name":"Samuel","surname":"Kingston","courses":["0005","0010","0013"]},
-      {"id":"182930a1b2c3d4e5f6071829","name":"Tina","surname":"Lancaster","courses":["0001","0002","0006","0012"]},
-      {"id":"2930a1b2c3d4e5f607182930","name":"Ulysses","surname":"Montgomery","courses":["0004","0009","0017"]},
-      {"id":"30a1b2c3d4e5f607182930a1","name":"Victoria","surname":"Nash","courses":["0003","0011","0015"]},
-      {"id":"a1b2c3d4e5f607182930a1b3","name":"William","surname":"Olsen","courses":["0002","0005","0014"]},
-      {"id":"b2c3d4e5f607182930a1b2c4","name":"Xavier","surname":"Patterson","courses":["0006","0007","0013","0016"]}
-      ],
-
-
-    "courses": [
-      {"id":"0001", "courseName":"Accounting"},
-      {"id":"0002", "courseName":"Biology"},
-      {"id":"0003", "courseName":"Chemistry"},
-      {"id":"0004", "courseName":"Design"},
-      {"id":"0005", "courseName":"Engineering"},
-      {"id":"0006", "courseName":"Fine Art"},
-      {"id":"0007", "courseName":"Geography"},
-      {"id":"0008", "courseName":"History"},
-      {"id":"0009", "courseName":"International Studies"},
-      {"id":"0010", "courseName":"Languages"},
-      {"id":"0011", "courseName":"Mathematics"},
-      {"id":"0012", "courseName":"Nursing and Healthcare"},
-      {"id":"0013", "courseName":"Philosophy"},
-      {"id":"0014", "courseName":"Religious Studies"},
-      {"id":"0015", "courseName":"Software Engineering"},
-      {"id":"0016", "courseName":"Textiles"},
-      {"id":"0017", "courseName":"Visual Communications"}
-    ]
+{
+  "students": [
+    {
+      "id": "60b1c1f4e8a4c0000fbbf01d",
+      "name": "John",
+      "surname": "Smith",
+      "courses": [
+        {
+          "id": "0001",
+          "courseName": "Accounting"
+        },
+        {
+          "id": "0003",
+          "courseName": "Chemistry"
+        },
+        {
+          "id": "0004",
+          "courseName": "Design"
+        },
+        {
+          "id": "0005",
+          "courseName": "Engineering"
+        }
+      ]
+    },
+    {
+      "id": "0000fbbf01d60b1c1f4e8a4c",
+      "name": "Marleene",
+      "surname": "Jackobine",
+      "courses": [
+        {
+          "id": "0002",
+          "courseName": "Biology"
+        },
+        {
+          "id": "0003",
+          "courseName": "Chemistry"
+        }
+      ]
+    },
+    {
+      "id": "01f4e8a4c000fbbf01d60b1c",
+      "name": "Eliza",
+      "surname": "Varlark",
+      "courses": [
+        {
+          "id": "0001",
+          "courseName": "Accounting"
+        },
+        {
+          "id": "0002",
+          "courseName": "Biology"
+        },
+        {
+          "id": "0012",
+          "courseName": "Nursing and Healthcare"
+        },
+        {
+          "id": "0013",
+          "courseName": "Philosophy"
+        },
+        {
+          "id": "0014",
+          "courseName": "Religious Studies"
+        },
+        {
+          "id": "0015",
+          "courseName": "Software Engineering"
+        },
+        {
+          "id": "0016",
+          "courseName": "Textiles"
+        }
+      ]
+    },
+    {
+      "id": "060b1c1f4e8a4000fbbf01dc",
+      "name": "Marco",
+      "surname": "Slavan",
+      "courses": [
+        {
+          "id": "0007",
+          "courseName": "Geography"
+        },
+        {
+          "id": "0008",
+          "courseName": "History"
+        }
+      ]
+    },
+    {
+      "id": "cbbf0100d60b00f4e8a41c1f",
+      "name": "Vera",
+      "surname": "Parsley",
+      "courses": [
+        {
+          "id": "0011",
+          "courseName": "Mathematics"
+        },
+        {
+          "id": "0012",
+          "courseName": "Nursing and Healthcare"
+        },
+        {
+          "id": "0016",
+          "courseName": "Textiles"
+        }
+      ]
+    },
+    {
+      "id": "18a41c0fb0c060b0f01dbf4e",
+      "name": "Percival",
+      "surname": "Merycourt",
+      "courses": [
+        {
+          "id": "0006",
+          "courseName": "Fine Art"
+        },
+        {
+          "id": "0008",
+          "courseName": "History"
+        },
+        {
+          "id": "0013",
+          "courseName": "Philosophy"
+        },
+        {
+          "id": "0017",
+          "courseName": "Visual Communications"
+        }
+      ]
+    },
+    {
+      "id": "f4e8a4c060b1c1f4e8a4c001",
+      "name": "Alice",
+      "surname": "Hamilton",
+      "courses": [
+        {
+          "id": "0001",
+          "courseName": "Accounting"
+        },
+        {
+          "id": "0005",
+          "courseName": "Engineering"
+        },
+        {
+          "id": "0010",
+          "courseName": "Languages"
+        }
+      ]
+    },
+    {
+      "id": "b1c1f4e8a4c060b1c1f4e800",
+      "name": "Brian",
+      "surname": "Kendrick",
+      "courses": [
+        {
+          "id": "0002",
+          "courseName": "Biology"
+        },
+        {
+          "id": "0003",
+          "courseName": "Chemistry"
+        },
+        {
+          "id": "0009",
+          "courseName": "International Studies"
+        },
+        {
+          "id": "0012",
+          "courseName": "Nursing and Healthcare"
+        }
+      ]
+    },
+    {
+      "id": "0fbbf01d60b1c1f4e8a4c002",
+      "name": "Clara",
+      "surname": "Dawson",
+      "courses": [
+        {
+          "id": "0011",
+          "courseName": "Mathematics"
+        },
+        {
+          "id": "0013",
+          "courseName": "Philosophy"
+        }
+      ]
+    },
+    {
+      "id": "60b1c1f4e8a4c0000fbbf03d",
+      "name": "David",
+      "surname": "Ellison",
+      "courses": [
+        {
+          "id": "0004",
+          "courseName": "Design"
+        },
+        {
+          "id": "0007",
+          "courseName": "Geography"
+        },
+        {
+          "id": "0015",
+          "courseName": "Software Engineering"
+        }
+      ]
+    },
+    {
+      "id": "0000fbbf01d60b1c1f4e8c03",
+      "name": "Eva",
+      "surname": "Morrison",
+      "courses": [
+        {
+          "id": "0001",
+          "courseName": "Accounting"
+        },
+        {
+          "id": "0006",
+          "courseName": "Fine Art"
+        },
+        {
+          "id": "0017",
+          "courseName": "Visual Communications"
+        }
+      ]
+    },
+    {
+      "id": "01f4e8a4c000fbbf01d60b4c",
+      "name": "Frank",
+      "surname": "Reynolds",
+      "courses": [
+        {
+          "id": "0003",
+          "courseName": "Chemistry"
+        },
+        {
+          "id": "0008",
+          "courseName": "History"
+        },
+        {
+          "id": "0010",
+          "courseName": "Languages"
+        },
+        {
+          "id": "0012",
+          "courseName": "Nursing and Healthcare"
+        }
+      ]
+    },
+    {
+      "id": "060b1c1f4e8a4000fbbf01dd",
+      "name": "Grace",
+      "surname": "Sinclair",
+      "courses": [
+        {
+          "id": "0014",
+          "courseName": "Religious Studies"
+        }
+      ]
+    },
+    {
+      "id": "cbbf0100d60b00f4e8a41c2f",
+      "name": "Hector",
+      "surname": "Vaughn",
+      "courses": [
+        {
+          "id": "0005",
+          "courseName": "Engineering"
+        },
+        {
+          "id": "0011",
+          "courseName": "Mathematics"
+        },
+        {
+          "id": "0016",
+          "courseName": "Textiles"
+        }
+      ]
+    },
+    {
+      "id": "18a41c0fb0c060b0f01dbf5f",
+      "name": "Isla",
+      "surname": "Whitaker",
+      "courses": [
+        {
+          "id": "0002",
+          "courseName": "Biology"
+        },
+        {
+          "id": "0012",
+          "courseName": "Nursing and Healthcare"
+        },
+        {
+          "id": "0015",
+          "courseName": "Software Engineering"
+        }
+      ]
+    },
+    {
+      "id": "f4e8a4c060b1c1f4e8a4c006",
+      "name": "Jack",
+      "surname": "Young",
+      "courses": [
+        {
+          "id": "0001",
+          "courseName": "Accounting"
+        },
+        {
+          "id": "0003",
+          "courseName": "Chemistry"
+        },
+        {
+          "id": "0006",
+          "courseName": "Fine Art"
+        },
+        {
+          "id": "0017",
+          "courseName": "Visual Communications"
+        }
+      ]
+    },
+    {
+      "id": "b1c1f4e8a4c060b1c1f4e809",
+      "name": "Kara",
+      "surname": "Zimmer",
+      "courses": [
+        {
+          "id": "0007",
+          "courseName": "Geography"
+        },
+        {
+          "id": "0010",
+          "courseName": "Languages"
+        },
+        {
+          "id": "0014",
+          "courseName": "Religious Studies"
+        }
+      ]
+    },
+    {
+      "id": "0fbbf01d60b1c1f4e8a4c007",
+      "name": "Liam",
+      "surname": "Benson",
+      "courses": [
+        {
+          "id": "0001",
+          "courseName": "Accounting"
+        },
+        {
+          "id": "0002",
+          "courseName": "Biology"
+        },
+        {
+          "id": "0003",
+          "courseName": "Chemistry"
+        },
+        {
+          "id": "0004",
+          "courseName": "Design"
+        },
+        {
+          "id": "0005",
+          "courseName": "Engineering"
+        }
+      ]
+    },
+    {
+      "id": "a1b2c3d4e5f607182930a1b2",
+      "name": "Maya",
+      "surname": "Harrington",
+      "courses": [
+        {
+          "id": "0002",
+          "courseName": "Biology"
+        },
+        {
+          "id": "0005",
+          "courseName": "Engineering"
+        },
+        {
+          "id": "0010",
+          "courseName": "Languages"
+        }
+      ]
+    },
+    {
+      "id": "b2c3d4e5f607182930a1b2c3",
+      "name": "Noah",
+      "surname": "Fletcher",
+      "courses": [
+        {
+          "id": "0002",
+          "courseName": "Biology"
+        },
+        {
+          "id": "0005",
+          "courseName": "Engineering"
+        },
+        {
+          "id": "0010",
+          "courseName": "Languages"
+        }
+      ]
+    },
+    {
+      "id": "c3d4e5f607182930a1b2c3d4",
+      "name": "Olivia",
+      "surname": "Garrison",
+      "courses": [
+        {
+          "id": "0002",
+          "courseName": "Biology"
+        },
+        {
+          "id": "0005",
+          "courseName": "Engineering"
+        },
+        {
+          "id": "0010",
+          "courseName": "Languages"
+        }
+      ]
+    },
+    {
+      "id": "d4e5f607182930a1b2c3d4e5",
+      "name": "Patrick",
+      "surname": "Leverson",
+      "courses": [
+        {
+          "id": "0002",
+          "courseName": "Biology"
+        },
+        {
+          "id": "0005",
+          "courseName": "Engineering"
+        },
+        {
+          "id": "0010",
+          "courseName": "Languages"
+        }
+      ]
+    },
+    {
+      "id": "e5f607182930a1b2c3d4e5f6",
+      "name": "Quinn",
+      "surname": "Irving",
+      "courses": [
+        {
+          "id": "0002",
+          "courseName": "Biology"
+        },
+        {
+          "id": "0005",
+          "courseName": "Engineering"
+        },
+        {
+          "id": "0010",
+          "courseName": "Languages"
+        }
+      ]
+    },
+    {
+      "id": "f607182930a1b2c3d4e5f607",
+      "name": "Rachel",
+      "surname": "Jennings",
+      "courses": [
+        {
+          "id": "0002",
+          "courseName": "Biology"
+        },
+        {
+          "id": "0005",
+          "courseName": "Engineering"
+        },
+        {
+          "id": "0010",
+          "courseName": "Languages"
+        }
+      ]
+    },
+    {
+      "id": "07182930a1b2c3d4e5f60718",
+      "name": "Samuel",
+      "surname": "Kingston",
+      "courses": [
+        {
+          "id": "0002",
+          "courseName": "Biology"
+        },
+        {
+          "id": "0005",
+          "courseName": "Engineering"
+        },
+        {
+          "id": "0010",
+          "courseName": "Languages"
+        }
+      ]
+    },
+    {
+      "id": "182930a1b2c3d4e5f6071829",
+      "name": "Tina",
+      "surname": "Lancaster",
+      "courses": [
+        {
+          "id": "0003",
+          "courseName": "Chemistry"
+        }
+      ]
+    },
+    {
+      "id": "2930a1b2c3d4e5f607182930",
+      "name": "Ulysses",
+      "surname": "Montgomery",
+      "courses": [
+        {
+          "id": "0002",
+          "courseName": "Biology"
+        },
+        {
+          "id": "0005",
+          "courseName": "Engineering"
+        },
+        {
+          "id": "0010",
+          "courseName": "Languages"
+        }
+      ]
+    },
+    {
+      "id": "30a1b2c3d4e5f607182930a1",
+      "name": "Victoria",
+      "surname": "Nash",
+      "courses": [
+        {
+          "id": "0002",
+          "courseName": "Biology"
+        },
+        {
+          "id": "0005",
+          "courseName": "Engineering"
+        },
+        {
+          "id": "0010",
+          "courseName": "Languages"
+        }
+      ]
+    },
+    {
+      "id": "a1b2c3d4e5f607182930a1b3",
+      "name": "William",
+      "surname": "Olsen",
+      "courses": [
+        {
+          "id": "0002",
+          "courseName": "Biology"
+        },
+        {
+          "id": "0005",
+          "courseName": "Engineering"
+        },
+        {
+          "id": "0010",
+          "courseName": "Languages"
+        }
+      ]
+    },
+    {
+      "id": "b2c3d4e5f607182930a1b2c4",
+      "name": "Xavier",
+      "surname": "Patterson",
+      "courses": [
+        {
+          "id": "0002",
+          "courseName": "Biology"
+        },
+        {
+          "id": "0005",
+          "courseName": "Engineering"
+        },
+        {
+          "id": "0010",
+          "courseName": "Languages"
+        }
+      ]
+    },
+    {
+      "id": "5f607182930a130a1b2c3d4e",
+      "name": "Valeria",
+      "surname": "Portnash",
+      "courses": [
+        {
+          "id": "0002",
+          "courseName": "Biology"
+        },
+        {
+          "id": "0005",
+          "courseName": "Engineering"
+        },
+        {
+          "id": "0010",
+          "courseName": "Languages"
+        }
+      ]
+    },
+    {
+      "id": "07182930a1b3a1b2c3d4e5f6",
+      "name": "Zeke",
+      "surname": "Bershnat",
+      "courses": [
+        {
+          "id": "0002",
+          "courseName": "Biology"
+        },
+        {
+          "id": "0005",
+          "courseName": "Engineering"
+        },
+        {
+          "id": "0010",
+          "courseName": "Languages"
+        }
+      ]
+    },
+    {
+      "id": "7182930a1b2c4b2c3d4e5f60",
+      "name": "Felicity",
+      "surname": "Anderson",
+      "courses": [
+        {
+          "id": "0002",
+          "courseName": "Biology"
+        },
+        {
+          "id": "0005",
+          "courseName": "Engineering"
+        },
+        {
+          "id": "0010",
+          "courseName": "Languages"
+        }
+      ]
+    },
+    {
+      "id": "4e8a4c0020fbbf01d60b1c1f",
+      "name": "Yermana",
+      "surname": "Gordon",
+      "courses": [
+        {
+          "id": "0011",
+          "courseName": "Mathematics"
+        },
+        {
+          "id": "0013",
+          "courseName": "Philosophy"
+        }
+      ]
+    },
+    {
+      "id": "00fbbf03d60b1c1f4e8a4c00",
+      "name": "Elliot",
+      "surname": "Anderson",
+      "courses": [
+        {
+          "id": "0015",
+          "courseName": "Software Engineering"
+        }
+      ]
+    }
+  ],
+  "courses": [
+    {
+      "id": "0001",
+      "courseName": "Accounting"
+    },
+    {
+      "id": "0002",
+      "courseName": "Biology"
+    },
+    {
+      "id": "0003",
+      "courseName": "Chemistry"
+    },
+    {
+      "id": "0004",
+      "courseName": "Design"
+    },
+    {
+      "id": "0005",
+      "courseName": "Engineering"
+    },
+    {
+      "id": "0006",
+      "courseName": "Fine Art"
+    },
+    {
+      "id": "0007",
+      "courseName": "Geography"
+    },
+    {
+      "id": "0008",
+      "courseName": "History"
+    },
+    {
+      "id": "0009",
+      "courseName": "International Studies"
+    },
+    {
+      "id": "0010",
+      "courseName": "Languages"
+    },
+    {
+      "id": "0011",
+      "courseName": "Mathematics"
+    },
+    {
+      "id": "0012",
+      "courseName": "Nursing and Healthcare"
+    },
+    {
+      "id": "0013",
+      "courseName": "Philosophy"
+    },
+    {
+      "id": "0014",
+      "courseName": "Religious Studies"
+    },
+    {
+      "id": "0015",
+      "courseName": "Software Engineering"
+    },
+    {
+      "id": "0016",
+      "courseName": "Textiles"
+    },
+    {
+      "id": "0017",
+      "courseName": "Visual Communications"
+    }
+  ]
 }

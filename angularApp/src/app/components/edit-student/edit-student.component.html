@@ -1,5 +1,55 @@
-<p>edit-student works!</p>
-<p>student name {{studentId}}</p>
-<p>student name {{student.name}}</p>
-<p>student name {{student.surname}}</p>
-<p>error {{error}}</p>
+<p-table [value]="[student]">
+    <ng-template #header *ngIf="errMsgs.length == 0">
+        <tr>
+            <th style="width:25%">Id</th>
+            <th style="width:25%">Name</th>
+            <th style="width:25%">Surname</th>            
+        </tr>
+    </ng-template>
+    <ng-template #body let-student><!--(ngSubmit)="onSubmit()"-->
+        <tr *ngIf="errMsgs.length == 0">
+            <td>{{ student.id }}</td>
+            <td><p-inputgroup>
+                <input pInputText [(ngModel)]="student.name" />
+            </p-inputgroup></td>
+            <td><p-inputgroup>
+                <input pInputText [(ngModel)]="student.surname" />
+            </p-inputgroup></td>
+        </tr>
+        <br>
+        <tr>
+            <th style="width:25%">Courses</th>
+        </tr>
+        <tr>
+            <td>
+                <p-inputgroup>
+                    <div *ngFor="let course of allCourses" class="editCheckCourses col-6">
+                        <p-checkbox 
+                            [inputId]="course.id"  
+                            [value]="course" 
+                            [(ngModel)]="student.courses"
+                            />
+                        <label [for]="course.name" class="ml-2"> {{ course.id }} </label>
+                    </div>
+                </p-inputgroup>
+            </td>
+        </tr>
+        <button pButton *ngIf="errMsgs.length == 0" type="submit" (click)="onSubmit()">
+            <span pButtonLabel>Save</span>
+        </button>
+
+
+        <p-message severity="error" *ngIf="errMsgs.length > 0">{{ error }}</p-message>
+    </ng-template>    
+    
+    <!--p-messages [(value)]="errMsgs"></p-messages-->
+    
+    
+    <!--button pButton label="Show Warning" (click)="showWarning()"></button-->
+    <!--p-message severity="warn">
+    <ng-template pTemplate>
+        <div>{{ error }}</div>
+    </ng-template-->
+    
+
+<!--/p-table-->

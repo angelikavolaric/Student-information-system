@@ -1,0 +1,22 @@
+.body {
+    background-color: blue !important;
+    color: red !important;
+}
+
+.h1{
+    color: yellow !important;
+}
+
+.p-table{
+    background-color: aqua !important;
+}
+tr {
+    background-color: #ffffff !important;
+    padding: 7ex !important;
+}
+
+td {
+    background-color: #983a3a00;
+    margin: 2ex;
+
+}

@@ -4,5 +4,5 @@ export class Student {
     id!: string;
     name!: string;
     surname!: string;
-    courses: Array<string> | undefined;
+    courses!: Array<Course>;
 }

@@ -1,1 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
+html{
+    padding: 0 !important;
+    margin: 0 !important;
+}
+body{
+    background-color: #f0eff0;
+    padding: 0;
+    margin: 0;
+}
+
+main{
+    margin: 8px;
+}
+
+header{
+    background-color: #594859;
+    top: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+th, .pi{
+    background-color: #6c5d6c !important;
+    color: white !important;
+   
+
+}
+
+table{
+    /*border-radius: 2ex !important;*/
+}
+
+th:hover .pi:focus{
+    background-color: #4b3b4b !important;
+    color: white !important;
+}
+
+tr{
+    margin: 2ex;
+}
+
