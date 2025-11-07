@@ -22,25 +22,25 @@ export class StudentService {
     );
   };
 
-
-
   getStudentById(Id: string): Observable<Student> {
-    const params = new HttpParams().set('id', Id);
-    return this.httpClient.get<Student>(`${this.studentDataUrl}/${Id}`, { params }).pipe(
+    return this.httpClient.get<Student>(`${this.studentDataUrl}/${Id}`).pipe(
       catchError(this.handleError));
   };
 
-  /*updateStudent(Id: string, name: string, surname: string, courses: Course[]): Observable<Object> {
-    return null;
+  updateStudent(student: Student): Observable<Student> {
+    return this.httpClient.put<Student>(`${this.studentDataUrl}/${student.id}`, student).pipe(
+      catchError(this.handleError));
   };
 
-  addStudent(Id: string, name: string, surname: string, courses: Course[]): Observable<Object> {
-    return null;
+  addStudent(student: Student): Observable<Student> {
+    return this.httpClient.post<Student>(`${this.studentDataUrl}`, student).pipe(
+      catchError(this.handleError));
   };
 
-  deleteStudent(Id: string): Observable<undefined> {
-    return null;
-  };*/
+  deleteStudent(student: Student): Observable<Student> {
+    return this.httpClient.delete<Student>(`${this.studentDataUrl}/${student.id}`).pipe(
+      catchError(this.handleError));
+  };
 
    private handleError(error: HttpErrorResponse) {
     if (error.status === 0) {
