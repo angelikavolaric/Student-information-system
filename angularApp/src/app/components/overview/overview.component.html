@@ -41,7 +41,7 @@
             <td>{{ student.name }}</td>
             <td>{{ student.surname }}</td>
             <td>
-                <div *ngFor="let course of student.courses">{{ course.courseName }}</div>
+                <div *ngFor="let course of student.courses">{{ course.name }}</div>
             </td>
         </tr>
     </ng-template>
