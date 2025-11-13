@@ -24,7 +24,8 @@ import { CheckboxModule } from 'primeng/checkbox';
 export class EditStudentComponent implements OnInit{
 
   studentId = "";
-  student: Student = { id:"", name:"", surname:"", courses:[]};
+  student: Student = {id:"", name:"", surname:"", gender:"M", birthDate: "", email:"", phoneNumber:"", 
+    address: {homeAddress:"", postalCode:"", city:"", country:""}, courses:[]};
   error = "";
   allCourses: Course[] = []
 

@@ -1,3 +1,11 @@
-.editCheckCourses{
-    display:flexbox;
+
+.course-inputgroup {
+  display: block !important;
+  align-items: center ;
+}
+
+.saveButtonFixed{
+    top: 0.5ex;
+    right: 2ex;
+    position: absolute;
 }
