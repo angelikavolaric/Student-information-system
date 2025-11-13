@@ -1,0 +1,28 @@
+
+
+.saveButtonFixed{
+    top: 0.5ex;
+    right: 2ex;
+    position: absolute;
+}
+
+.vertical-inputgroup {
+  display: flex;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+}
+
+input{
+    width: 100% !important;
+    top: 0 !important;
+    border-radius: 1ex !important;
+    display: flex !important;
+
+}
+
+
+td p-message{
+    min-height: 0ex !important;
+    max-height: 0ex !important;
+}
+

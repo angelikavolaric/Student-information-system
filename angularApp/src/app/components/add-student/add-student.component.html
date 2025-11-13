@@ -1,1 +1,204 @@
-<p>add-student works!</p>
+<p-message *ngIf="errMsgs.length > 0" severity="error">{{ error }} 
+    <a href="overview">go to student overview</a>
+</p-message>
+<p-table 
+    [value]="[student]" 
+    stripedRows
+    *ngIf="errMsgs.length == 0">
+    <ng-template #header></ng-template>
+    <ng-template #body let-student>
+        <tr class="headerRow">
+            <th>ID</th>
+            <th>NAME</th>
+            <th>SURNAME</th> 
+            <th>GENDER</th>
+            <th>BIRTHDAY</th>
+            <th>EMAIL</th>
+            <th>PHONE</th> 
+        </tr>
+        <tr *ngIf="errMsgs.length == 0" class="contentRow">
+            <!--td>{{ student.id }}</td-->
+            
+            <td><p-inputgroup class="vertical-inputgroup">
+                <input 
+                    pInputText 
+                    type="text" 
+                    name="name" 
+                    #name="ngModel" 
+                    placeholder="John" 
+                    [(ngModel)]="student.name" 
+                    required
+                    [invalid]="name.invalid && (name.touched || submitted)" />
+                @if (name.invalid && (name.touched || submitted)) {
+                <p-message severity="error" size="small" variant="simple">Name is required.</p-message>
+                }
+
+            </p-inputgroup></td>
+            <td><p-inputgroup class="vertical-inputgroup">
+                <input 
+                    pInputText 
+                    type="text" 
+                    name="surname" 
+                    #surname="ngModel" 
+                    placeholder="Smith" 
+                    [(ngModel)]="student.surname" 
+                    required 
+                    [invalid]="surname.invalid && (surname.touched || submitted)"/>
+                @if (surname.invalid && (surname.touched || submitted)) {
+                <p-message severity="error" size="small" variant="simple">Surname is required.</p-message>
+                }
+            </p-inputgroup></td>
+            <td><p-inputgroup class="vertical-inputgroup">
+                <input 
+                    pInputText 
+                    type="text" 
+                    name="gender" 
+                    #gender="ngModel" 
+                    maxlength="1" 
+                    placeholder="M/F" 
+                    style="text-transform:uppercase" 
+                    [(ngModel)]="student.gender" 
+                    required  
+                    [invalid]="gender.invalid && (gender.touched || submitted)"/>
+                @if (gender.invalid && (gender.touched || submitted)) {
+                <p-message severity="error" size="small" variant="simple">Gender is required.</p-message>
+                }
+            </p-inputgroup></td>
+            <td><p-inputgroup class="vertical-inputgroup">
+                <input 
+                    pInputText 
+                    type="date" 
+                    name="birthdate" 
+                    #birthdate="ngModel" 
+                    placeholder="1. 1. 2000" 
+                    [(ngModel)]="student.birthDate" 
+                    required 
+                    [invalid]="birthdate.invalid && ((birthdate).touched || submitted)" />
+                @if (birthdate.invalid && (birthdate.touched || submitted)) {
+                <p-message severity="error" size="small" variant="simple">Birthdate is required.</p-message>
+                }
+            </p-inputgroup></td>
+            <td><p-inputgroup class="vertical-inputgroup">
+                <input 
+                    pInputText 
+                    type="email" 
+                    name="email" 
+                    #email="ngModel" 
+                    placeholder="example@example.com" 
+                    [(ngModel)]="student.email" 
+                    [invalid]="email.invalid && (email.touched || submitted)"/>
+                @if (email.invalid) {
+                <p-message severity="error" size="small" variant="simple">Email is not valid.</p-message>
+                }
+                @if (email.hasError('checkValues')) {
+                    Please enter a valid email.
+                }
+            </p-inputgroup></td>
+            <td><p-inputgroup class="vertical-inputgroup">
+                <input 
+                    pInputText 
+                    type="tel" 
+                    placeholder="012345678" 
+                    [(ngModel)]="student.phoneNumber" />
+            </p-inputgroup></td>
+        </tr>
+        <!--br-->
+        <tr *ngIf="errMsgs.length == 0" class="headerWithSub headerRow">
+            <th colspan="4">ADDRESS</th>
+        </tr>
+        <tr class="headerRow subHeaderRow">
+            <th>HOME ADDRESS</th>
+            <th>POSTAL CODE</th>
+            <th>CITY</th>
+            <th>COUNTRY</th>
+        </tr>
+        
+        <tr class="contentRow"> 
+            <td><p-inputgroup class="vertical-inputgroup">
+                <input 
+                    pInputText 
+                    type="text" 
+                    #street="ngModel" 
+                    placeholder="street, house number" 
+                    [(ngModel)]="student.address.homeAddress" 
+                    required 
+                    [invalid]="street.invalid && (street.touched || submitted)"/>
+            @if (street.invalid && (street.touched || submitted)) {
+                <p-message severity="error" size="small" variant="simple">Home address is required.</p-message>
+                }
+            </p-inputgroup></td>
+            <td><p-inputgroup class="vertical-inputgroup">
+                <input 
+                    pInputText 
+                    type="text" 
+                    #post="ngModel" 
+                    placeholder="0000" 
+                    [(ngModel)]="student.address.postalCode" 
+                    required 
+                    [invalid]="post.invalid && (post.touched || submitted)"/>
+                @if (post.invalid && (post.touched || submitted)) {
+                <p-message severity="error" size="small" variant="simple">Postal code is required.</p-message>
+                }
+            </p-inputgroup></td>
+            <td><p-inputgroup class="vertical-inputgroup">
+                <input 
+                    pInputText 
+                    type="text" 
+                    #city="ngModel" 
+                    placeholder="Montana" 
+                    [(ngModel)]="student.address.city" 
+                    required 
+                    [invalid]="city.invalid && (city.touched || submitted)"/>
+                @if (city.invalid && (city.touched || submitted)) {
+                <p-message severity="error" size="small" variant="simple">City is required.</p-message>
+                }
+            </p-inputgroup></td>                
+            <td><p-inputgroup class="vertical-inputgroup">
+                <input 
+                    pInputText 
+                    type="text" 
+                    #country="ngModel" 
+                    placeholder="USA" 
+                    [(ngModel)]="student.address.country" 
+                    required 
+                    [invalid]="country.invalid && (country.touched || submitted)"/>
+                @if (country.invalid && (country.touched || submitted)) {
+                <p-message severity="error" size="small" variant="simple">Country is required.</p-message>
+                }
+            </p-inputgroup></td>
+        </tr>
+
+        <tr class="headerWithSub headerRow">
+            <th colspan="3" rowspan="2">COURSES</th>
+        </tr>
+        <tr class="headerRow subHeaderRow">
+            <th style="width: 10%;">ENROLED</th>
+            <th style="width: 10%;">ID</th>
+            <th>COURSE NAME</th>
+        </tr>
+        <tr *ngFor="let course of allCourses" class="contentRow">
+            <td><p-inputgroup class="course-inputgroup">
+                <p-checkbox 
+                    [inputId]="course.id"  
+                    [value]="course" 
+                    [(ngModel)]="student.courses"
+                    />
+            </p-inputgroup></td>
+            <td>
+                {{ course.id }}
+            </td>
+            <td>
+                <!--label [for]="course.name" class="ml-2"> {{ course.id }} </label-->
+                {{ course.name }}
+            </td>
+
+            
+        </tr>
+
+        <button pButton *ngIf="errMsgs.length == 0; disabled" type="submit" (click)="onSubmit()" class="saveButtonFixed" style=" z-index: 100">
+            <span pButtonLabel>Save</span>
+        </button>
+
+    
+
+    </ng-template>    
