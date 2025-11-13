@@ -1,1 +1,46 @@
-<p>delete-student works!</p>
+<p-message *ngIf="errMsgs.length > 0" severity="error">{{ error }} 
+    <a href="overview">go to student overview</a>
+</p-message>
+<p-table 
+    [value]="[student]" 
+    stripedRows
+    *ngIf="errMsgs.length == 0">
+    <ng-template #header>
+    </ng-template>
+    <ng-template #body let-student>
+        <tr class="headerRow">
+            <th>ID</th>
+            <th>NAME</th>
+            <th>SURNAME</th> 
+            <th>GENDER</th>
+            <th>BIRTHDAY</th>
+            <th>EMAIL</th>
+            <th>PHONE</th>
+            <th>ADDRESS</th>         
+        </tr>
+    
+        <tr *ngIf="errMsgs.length == 0" class="contentRow">
+            <td>{{ student.id }}</td>
+            <td class="notWrap">{{ student.name }}</td>
+            <td class="notWrap">{{ student.surname }}</td>
+            <td>{{ student.gender }}</td>
+            <td>{{ student.birthDate }}</td>
+            <td>{{ student.email }}</td>
+            <td>{{ student.phoneNumber }}</td>
+            <td>{{ student.address.homeAddress }}, {{ student.address.postalCode }} {{ student.address.city }}, {{ student.address.country }}</td>
+        </tr>
+       
+        
+        <p-button *ngIf="errMsgs.length == 0"  class="deleteButtonFixed" (click)="deleteStudentPopup()">
+            <span pButtonLabel>Delete student</span>
+        </p-button>
+
+        <p-dialog header="WARNING" [modal]="true" [(visible)]="visible">
+            <p>Are you sure you want to delete the student?</p>
+            <button pButton  type="delete" (click)="deleteStudent()" class="deleteButtonFixed">
+                <span pButtonLabel>Delete student</span>
+            </button>
+            
+        </p-dialog>
+        
+    </ng-template>    

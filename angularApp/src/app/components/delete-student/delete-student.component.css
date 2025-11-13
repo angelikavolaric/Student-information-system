@@ -1,0 +1,9 @@
+.deleteButtonFixed{
+    background-color: red !important;
+    border-color: red;
+}
+
+.deleteButtonFixed:hover{
+    background-color: darkred !important;
+    border-color: darkred;
+}
