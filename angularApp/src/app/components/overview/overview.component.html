@@ -1,8 +1,10 @@
-<div class="mb-4">
-    <p-button type="button" icon="pi pi-chevron-left" (click)="prev()" [disabled]="isFirstPage()" text />
-    <p-button type="button" icon="pi pi-refresh" (click)="reset()" text />
-    <p-button type="button" icon="pi pi-chevron-right" (click)="next()" [disabled]="isLastPage()" text />
-</div>
+<ng-template #footer>
+    <div class="mb-4">
+        <p-button type="button" icon="pi pi-chevron-left" (click)="prev()" [disabled]="isFirstPage()" text />
+        <p-button type="button" icon="pi pi-refresh" (click)="reset()" text />
+        <p-button type="button" icon="pi pi-chevron-right" (click)="next()" [disabled]="isLastPage()" text />
+    </div>
+</ng-template>
 <p-table
     [value]="students"
     [paginator]="true"
@@ -10,38 +12,74 @@
     [first]="first"
     stripedRows
     [showCurrentPageReport]="true"
-    [tableStyle]="{ 'min-width': '50rem' }"
+    [tableStyle]="{ 'min-width': '50rem', 'table-layout': 'auto', 'width': '100%'}"
     currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
     (onPage)="pageChange($event)"
-    [rowsPerPageOptions]="[10, 25, 50]"
+    [rowsPerPageOptions]="[10, 25, 50, 100]"
 >
     <ng-template #header>
-        <tr class="border-round-sm">
-            <th pSortableColumn="id" style="width:25%" class="border-round-sm">
-                Id
+        <tr class="headerRow">
+            <th 
+                pSortableColumn="id">
+                ID
                 <p-sortIcon field="Id" class="icons"/>
             </th>
-            <th pSortableColumn="name" style="width:25%">
-                Name
+            <th 
+                pSortableColumn="name">
+                NAME
                 <p-sortIcon field="Name" class="icons" />
             </th>
-            <th pSortableColumn="surname" style="width:25%">
-                Surname
+            <th 
+                pSortableColumn="surname">
+                SURNAME
                 <p-sortIcon field="Surname" class="icons"/>
             </th>
-            <th pSortableColumn="courses" style="width:25%">
-                Courses
+            <th 
+                pSortableColumn="gender">
+                GENDER
+                <p-sortIcon field="Gender" class="icons"/>
+            </th>
+            <th 
+                pSortableColumn="birthDate">
+                BIRTHDATE
+                <p-sortIcon field="birthDate" class="icons"/>
+            </th>
+            <th 
+                pSortableColumn="email">
+                E-MAIL
+                <p-sortIcon field="email" class="icons"/>
+            </th>
+            <th 
+                pSortableColumn="phoneNumber">
+                PHONE NUMBER
+                <p-sortIcon field="phoneNumber" class="icons"/>
+            </th>
+            <th 
+                pSortableColumn="address.homeAddress">
+                ADDRESS
+                <p-sortIcon field="address" class="icons"/>
+            </th>
+            <th 
+                pSortableColumn="courses">
+                COURSES
                 <p-sortIcon field="Courses" class="icons"/>
             </th>
         </tr>
     </ng-template>
-    <ng-template #body let-student styleClass="custom-table">
-        <tr>
+    <ng-template #body let-student styleClass="customTable">
+        <tr class="contentRow">
             <td>{{ student.id }}</td>
-            <td>{{ student.name }}</td>
-            <td>{{ student.surname }}</td>
+            <td class="notWrap">{{ student.name }}</td>
+            <td class="notWrap">{{ student.surname }}</td>
+            <td>{{ student.gender }}</td>
+            <td>{{ student.birthDate }}</td>
+            <td>{{ student.email }}</td>
+            <td>{{ student.phoneNumber }}</td>
+            <td>{{ student.address.homeAddress }}, {{ student.address.city }}, {{ student.address.country }}</td>
             <td>
-                <div *ngFor="let course of student.courses">{{ course.name }}</div>
+                <div class="expandCourse">
+                    <div *ngFor="let course of student.courses">{{ course.name }}</div>
+                </div>
             </td>
         </tr>
     </ng-template>

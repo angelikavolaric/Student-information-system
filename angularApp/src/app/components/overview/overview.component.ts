@@ -2,29 +2,28 @@ import { Component } from '@angular/core';
 import { StudentService } from '../../services/student.service';
 import { CourseService } from '../../services/course.service';
 import { Student } from '../../classes/student';
+import { Address } from '../../classes/address';
 import { CommonModule } from '@angular/common';
-
-import { BrowserModule } from '@angular/platform-browser';
-
 import { ButtonModule } from 'primeng/button';
-import { Paginator } from 'primeng/paginator';
 import { TableModule } from 'primeng/table';
 
 
 @Component({
   selector: 'app-overview',
-  imports: [CommonModule, ButtonModule, TableModule, Paginator],
+  imports: [CommonModule, ButtonModule, TableModule],
   templateUrl: './overview.component.html',
   styleUrl: './overview.component.css'
 })
 export class OverviewComponent {
   error: any;
-
+  selectedStudent: Student = {id:"", name:"", surname:"", gender:"M", birthDate:"", email:"", phoneNumber:"", 
+    address: {homeAddress:"", postalCode:"", city:"", country:""}, courses:[]};
   rows = 20;
   constructor(private studentService: StudentService,){}
 
   students: Student[] = []
-  stu: Student= {id:"", name:"", surname:"", courses:[]};
+  stu: Student= {id:"", name:"", surname:"", gender:"M", birthDate:"", email:"", phoneNumber:"", 
+    address: {homeAddress:"", postalCode:"", city:"", country:""}, courses:[]};
 
   
   currentPage = 1;
