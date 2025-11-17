@@ -5,7 +5,7 @@
       "name": "John",
       "surname": "Smith",
       "gender": "M",
-      "birthDate": "18. 11. 1996",
+      "birthDate": "1996-11-18 ",
       "email": "johnsmith@email.com",
       "phoneNumber": "012123450",
       "address": {
@@ -22,6 +22,18 @@
         {
           "id": "0007",
           "name": "Geography"
+        },
+        {
+          "id": "0006",
+          "name": "Fine Art"
+        },
+        {
+          "id": "0005",
+          "name": "Engineering"
+        },
+        {
+          "id": "0009",
+          "name": "International Studies"
         }
       ]
     },
@@ -30,7 +42,7 @@
       "name": "Marleene",
       "surname": "Jackobine",
       "gender": "F",
-      "birthDate": "16. 4. 1983",
+      "birthDate": "1983-04-16",
       "email": "mjack@email.com",
       "phoneNumber": "111111111",
       "address": {
@@ -55,7 +67,7 @@
       "name": "Eliza",
       "surname": "Varlark",
       "gender": "F",
-      "birthDate": "22. 8. 1999",
+      "birthDate": "1999-11-02",
       "email": "evar@email.com",
       "phoneNumber": "012123451",
       "address": {
@@ -100,7 +112,7 @@
       "name": "Marco",
       "surname": "Slavan",
       "gender": "M",
-      "birthDate": "2. 1. 2000",
+      "birthDate": "2000-05-01",
       "email": "slavanm@email.com",
       "phoneNumber": "000111122",
       "address": {
@@ -125,7 +137,7 @@
       "name": "Vera",
       "surname": "Parsley",
       "gender": "F",
-      "birthDate": "25. 2. 1987",
+      "birthDate": "1997-04-27",
       "email": "vp@email.com",
       "phoneNumber": "012122250",
       "address": {
@@ -154,7 +166,7 @@
       "name": "Percival",
       "surname": "Merycourt",
       "gender": "M",
-      "birthDate": "25. 2. 1987",
+      "birthDate": "1987-02-21",
       "email": "pmery@email.com",
       "phoneNumber": "010101010",
       "address": {
@@ -187,7 +199,7 @@
       "name": "Alice",
       "surname": "Hamilton",
       "gender": "F",
-      "birthDate": "16. 12. 1980",
+      "birthDate": "1989-03-31",
       "email": "aliceh@email.com",
       "phoneNumber": "012166750",
       "address": {
@@ -216,7 +228,7 @@
       "name": "Brian",
       "surname": "Kendrick",
       "gender": "M",
-      "birthDate": "17. 12. 1980",
+      "birthDate": "1980-12-12",
       "email": "bken@email.com",
       "phoneNumber": "222222222",
       "address": {
@@ -249,7 +261,7 @@
       "name": "Clara",
       "surname": "Dawson",
       "gender": "F",
-      "birthDate": "30. 8. 1999",
+      "birthDate": "1999-08-01",
       "email": "cdawson@email.com",
       "phoneNumber": "055444322",
       "address": {
@@ -274,7 +286,7 @@
       "name": "David",
       "surname": "Ellison",
       "gender": "M",
-      "birthDate": "2. 1. 2003",
+      "birthDate": "2003-02-10",
       "email": "dellison@email.com",
       "phoneNumber": "012123540",
       "address": {
@@ -303,7 +315,7 @@
       "name": "Eva",
       "surname": "Morrison",
       "gender": "F",
-      "birthDate": "16. 6. 1980",
+      "birthDate": "1980-12-16",
       "email": "evamorr@email.com",
       "phoneNumber": "011113450",
       "address": {
@@ -332,7 +344,7 @@
       "name": "Frank",
       "surname": "Reynolds",
       "gender": "M",
-      "birthDate": "20. 10. 1990",
+      "birthDate": "1990-10-20",
       "email": "frey@email.com",
       "phoneNumber": "012100000",
       "address": {
@@ -365,7 +377,7 @@
       "name": "Grace",
       "surname": "Sinclair",
       "gender": "F",
-      "birthDate": "20. 10. 1990",
+      "birthDate": "1990-03-24",
       "email": "sing@email.com",
       "phoneNumber": "012123450",
       "address": {
@@ -386,7 +398,7 @@
       "name": "Hector",
       "surname": "Vaughn",
       "gender": "M",
-      "birthDate": "20. 10. 1990",
+      "birthDate": "1990-12-03",
       "email": "hecvau@email.com",
       "phoneNumber": "012232323",
       "address": {
@@ -415,7 +427,7 @@
       "name": "Isla",
       "surname": "Whitaker",
       "gender": "F",
-      "birthDate": "2. 1. 1990",
+      "birthDate": "1990-08-17",
       "email": "islaw@email.com",
       "phoneNumber": "999999450",
       "address": {
@@ -444,7 +456,7 @@
       "name": "Jack",
       "surname": "Young",
       "gender": "M",
-      "birthDate": "24. 12. 2000",
+      "birthDate": "2000-12-14",
       "email": "youngjack@email.com",
       "phoneNumber": "566555655",
       "address": {
@@ -477,7 +489,7 @@
       "name": "Kara",
       "surname": "Zimmer",
       "gender": "F",
-      "birthDate": "24. 12. 2000",
+      "birthDate": "2001-01-02",
       "email": "karaz@email.com",
       "phoneNumber": "011333333",
       "address": {
@@ -506,7 +518,7 @@
       "name": "Liam",
       "surname": "Benson",
       "gender": "M",
-      "birthDate": "1. 12. 2000",
+      "birthDate": "2000-01-05",
       "email": "liamb@email.com",
       "phoneNumber": "912123450",
       "address": {
@@ -543,7 +555,7 @@
       "name": "Maya",
       "surname": "Harrington",
       "gender": "F",
-      "birthDate": "2. 1. 1990",
+      "birthDate": "1990-09-09",
       "email": "mmmaya@email.com",
       "phoneNumber": "099011077",
       "address": {
@@ -572,7 +584,7 @@
       "name": "Noah",
       "surname": "Fletcher",
       "gender": "M",
-      "birthDate": "16. 4. 1980",
+      "birthDate": "1980-06-12",
       "email": "noahf@email.com",
       "phoneNumber": "211123450",
       "address": {
@@ -601,7 +613,7 @@
       "name": "Olivia",
       "surname": "Garrison",
       "gender": "F",
-      "birthDate": "4. 3. 1995",
+      "birthDate": "1995-10-12",
       "email": "johnsmith@email.com",
       "phoneNumber": "888888888",
       "address": {
@@ -630,7 +642,7 @@
       "name": "Patrick",
       "surname": "Leverson",
       "gender": "M",
-      "birthDate": "17. 12. 1988",
+      "birthDate": "1988-12-17",
       "email": "patrickleverson@email.com",
       "phoneNumber": "012123450",
       "address": {
@@ -659,7 +671,7 @@
       "name": "Quinn",
       "surname": "Irving",
       "gender": "M",
-      "birthDate": "17. 12. 1988",
+      "birthDate": "1988-12-17",
       "email": "quinny@email.com",
       "phoneNumber": "012123450",
       "address": {
@@ -688,7 +700,7 @@
       "name": "Rachel",
       "surname": "Jennings Smith",
       "gender": "F",
-      "birthDate": "13. 7. 1995",
+      "birthDate": "1995-07-13",
       "email": "racheljennings@email.com",
       "phoneNumber": "012123450",
       "address": {
@@ -717,7 +729,7 @@
       "name": "Samuel",
       "surname": "Kingston",
       "gender": "M",
-      "birthDate": "4. 3. 1986",
+      "birthDate": "1986-03-04",
       "email": "kingsam@email.com",
       "phoneNumber": "012333330",
       "address": {
@@ -746,7 +758,7 @@
       "name": "Tina",
       "surname": "Lancaster",
       "gender": "M",
-      "birthDate": "4. 3. 1976",
+      "birthDate": "1976-09-30",
       "email": "lantina@email.com",
       "phoneNumber": "012777889",
       "address": {
@@ -767,7 +779,7 @@
       "name": "Ulysses",
       "surname": "Montgomery",
       "gender": "M",
-      "birthDate": "4. 3. 1995",
+      "birthDate": "1995-04-04",
       "email": "ulysses@email.com",
       "phoneNumber": "312123450",
       "address": {
@@ -796,7 +808,7 @@
       "name": "Victoria",
       "surname": "Nash",
       "gender": "F",
-      "birthDate": "30. 9. 1999",
+      "birthDate": "1999-05-05",
       "email": "victory@email.com",
       "phoneNumber": "333444555",
       "address": {
@@ -825,7 +837,7 @@
       "name": "William",
       "surname": "Olsen",
       "gender": "M",
-      "birthDate": "30. 9. 1999",
+      "birthDate": "1999-09-19",
       "email": "olsenw@email.com",
       "phoneNumber": "982123450",
       "address": {
@@ -854,7 +866,7 @@
       "name": "Xavier",
       "surname": "Patterson",
       "gender": "M",
-      "birthDate": "6. 4. 1983",
+      "birthDate": "1983-04-06",
       "email": "xavpatt@email.com",
       "phoneNumber": "665888888",
       "address": {
@@ -883,7 +895,7 @@
       "name": "Valeria",
       "surname": "Portnash",
       "gender": "M",
-      "birthDate": "6. 3. 1986",
+      "birthDate": "1986-03-07",
       "email": "valp@email.com",
       "phoneNumber": "555555450",
       "address": {
@@ -912,7 +924,7 @@
       "name": "Zeke",
       "surname": "Bershnat",
       "gender": "M",
-      "birthDate": "4. 3. 1986",
+      "birthDate": "1986-02-20",
       "email": "bzeke@email.com",
       "phoneNumber": "044443333",
       "address": {
@@ -941,7 +953,7 @@
       "name": "Felicity",
       "surname": "Anderson",
       "gender": "M",
-      "birthDate": "18. 11. 1997",
+      "birthDate": "1997-11-18",
       "email": "felicityh@email.com",
       "phoneNumber": "012333657",
       "address": {
@@ -970,7 +982,7 @@
       "name": "Yermana",
       "surname": "Gordon",
       "gender": "F",
-      "birthDate": "18. 10. 1996",
+      "birthDate": "1996-12-29",
       "email": "gordony@email.com",
       "phoneNumber": "077474450",
       "address": {
@@ -995,7 +1007,7 @@
       "name": "Elliot",
       "surname": "Alderson",
       "gender": "M",
-      "birthDate": "17. 9. 1986",
+      "birthDate": "1986-09-17",
       "email": "elliotalderson@email.com",
       "phoneNumber": "404000000",
       "address": {
@@ -1016,19 +1028,88 @@
       "name": "Sad",
       "surname": "Deleter",
       "gender": "M",
-      "birthDate": "17. 9. 1986",
-      "email": "elliotalderson@email.com",
+      "birthDate": "1999-09-09",
+      "email": "zero@email.com",
       "phoneNumber": "000000000",
       "address": {
-        "homeAddress": "Broadway 217e",
-        "postalCode": "10002",
-        "city": "Newyork",
-        "country": "USA"
+        "homeAddress": "Broadkey 010",
+        "postalCode": "1000",
+        "city": "Newyaurk",
+        "country": "Urland"
       },
       "courses": [
         {
           "id": "0015",
           "name": "Software Engineering"
+        }
+      ]
+    },
+    {
+      "id": "79e2089ef62d48c69682a8e4",
+      "name": "Testa",
+      "surname": "Test",
+      "gender": "F",
+      "birthDate": "2000-12-12",
+      "email": "",
+      "phoneNumber": "",
+      "address": {
+        "homeAddress": "Flag 3",
+        "postalCode": "1234",
+        "city": "sdf",
+        "country": "s"
+      },
+      "courses": []
+    },
+    {
+      "id": "475968549d304b1aba4f1c70",
+      "name": "Alana",
+      "surname": "Hektor",
+      "gender": "F",
+      "birthDate": "2003-02-01",
+      "email": "",
+      "phoneNumber": "",
+      "address": {
+        "homeAddress": "House of This 1",
+        "postalCode": "34L3",
+        "city": "Goog",
+        "country": "Crimson"
+      },
+      "courses": []
+    },
+    {
+      "id": "125f04c8bb8e4c4c94adee5a",
+      "name": "Johanna",
+      "surname": "Leverstone",
+      "gender": "F",
+      "birthDate": "1990-07-01",
+      "email": "johanna.leverstone@gmail.com",
+      "phoneNumber": "098765938424",
+      "address": {
+        "homeAddress": "Fearhill 12c",
+        "postalCode": "8977",
+        "city": "Verr Lake",
+        "country": "Bromshouse"
+      },
+      "courses": [
+        {
+          "id": "0002",
+          "name": "Biology"
+        },
+        {
+          "id": "0004",
+          "name": "Design"
+        },
+        {
+          "id": "0003",
+          "name": "Chemistry"
+        },
+        {
+          "id": "0008",
+          "name": "History"
+        },
+        {
+          "id": "0009",
+          "name": "International Studies"
         }
       ]
     }
