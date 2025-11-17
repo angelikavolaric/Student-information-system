@@ -77,6 +77,9 @@
                 @if (birthdate.invalid && (birthdate.touched || submitted)) {
                 <p-message severity="error" size="small" variant="simple">Birthdate is required.</p-message>
                 }
+                @if (birthdate.model >= todayDate && (birthdate.touched || submitted)) {
+                <p-message severity="error" size="small" variant="simple">Birthdate is not valid.</p-message>
+                }
             </p-inputgroup></td>
             <td><p-inputgroup class="vertical-inputgroup">
                 <input 

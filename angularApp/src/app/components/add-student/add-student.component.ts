@@ -74,7 +74,6 @@ export class AddStudentComponent {
    }
 
   ngOnInit(): void {
-
         this.student.id = this.generateId()
         this.courseService.getAllCourses().subscribe(
         (data: Course[]) => {
