@@ -1,5 +1,45 @@
-.expandCourse {
-  max-height: 35px;
-  overflow-y: auto;
-  z-index: 9999;
+@import "primeicons/primeicons.css";
+.p-paginator .p-paginator-curren {
+    text-align:  left !important;
+    
 }
+
+button, .p-speeddial-button.p-button-icon-only.p-button-rounded, .p-speeddial {
+    background-color: var(--p-primary-100) !important;
+    border-color: var(--p-primary-100) !important;
+    color: var(--p-primary-500) !important;
+}
+
+.expandedTable .headerRow{
+    padding: 0 !important;
+    background-color: var(--p-primary-300) !important;
+}
+
+.expandedTable{
+    display: absolute !important;
+    border-radius: 0 0 1ex 1ex !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}   
+
+.coursesInOverview{
+    display: inline-block;
+    border-radius: 1ex !important;
+}
+
+.actionButton{
+    display: flex !important;
+    right: 10px !important;
+    padding: 5.5ex 0 0 0 !important;
+    margin: 0 !important;
+    position: absolute !important;
+    height: 10px;
+}
+
+.actionButton p-speeddial{
+    position: relative !important;
+    height: 10px !important;
+    left: 'calc(50% - 2rem)';
+    bottom: 0 !important;
+}
+
+

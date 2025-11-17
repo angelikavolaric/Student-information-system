@@ -1,26 +1,34 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { StudentService } from '../../services/student.service';
-import { CourseService } from '../../services/course.service';
 import { Student } from '../../classes/student';
-import { Address } from '../../classes/address';
 import { CommonModule } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
-
+import { SpeedDialModule } from 'primeng/speeddial';
+import { MenuItem, MessageService } from 'primeng/api';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-overview',
-  imports: [CommonModule, ButtonModule, TableModule],
+  providers: [MessageService,],
+  imports: [
+    CommonModule, 
+    ButtonModule, 
+    TableModule,
+    SpeedDialModule,
+  ],
   templateUrl: './overview.component.html',
   styleUrl: './overview.component.css'
 })
 export class OverviewComponent {
+  private router = inject(Router)
+  menuItems!: MenuItem[]; // menu items for edit / delete student
 
   error: any;
   selectedStudent: Student = {id:"", name:"", surname:"", gender:"M", birthDate:"", email:"", phoneNumber:"", 
     address: {homeAddress:"", postalCode:"", city:"", country:""}, courses:[]};
   rows = 20;
-  constructor(private studentService: StudentService,){}
+  
 
   students: Student[] = []
   stu: Student= {id:"", name:"", surname:"", gender:"M", birthDate:"", email:"", phoneNumber:"", 
@@ -29,6 +37,10 @@ export class OverviewComponent {
   
   currentPage = 1;
   first= 0; //index of first shown on page
+
+  constructor(private studentService: StudentService,
+    private messageService: MessageService,
+  ){}
 
   reset(): boolean {
     return this.currentPage === 1;
@@ -57,7 +69,43 @@ export class OverviewComponent {
     }
   }
 
+  expandedRows: { [key: string]: boolean } = {};
+
+  onRowExpand(student: any){
+    this.expandedRows[student.id] = true;
+  }
+
+  onRowCollapse(student: any){
+    this.expandedRows[student.id] = false;
+  }
+
+  openMenu(student: Student){
+    this.menuItems = [
+            {
+                label: 'Edit',
+                icon: "pi pi-pencil",
+                command: () => {
+                  console.log(student)
+                  this.router.navigate(['/edit', student.id]);
+
+                  // this.editStudent(student)
+                }
+               
+            },
+            {
+                label: 'Delete',
+                icon: "pi pi-trash",
+                command: () => {
+                  this.router.navigate(['/delete', student.id]);
+                }
+            }
+        ];
+  }
+
   ngOnInit(): void {
+
+
+    
    this.studentService.getAllStudents().subscribe(
           (data: Student[]) => {
             this.students = data

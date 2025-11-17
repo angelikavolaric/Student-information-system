@@ -6,6 +6,11 @@
     </div>
 </ng-template>
 <p-table
+    dataKey="id"
+    [expandedRowKeys]="expandedRows"
+    (onRowExpand)="onRowExpand($event)" 
+    (onRowCollapse)="onRowCollapse($event)"
+
     [value]="students"
     [paginator]="true"
     [rows]=rows
@@ -66,7 +71,7 @@
             </th>
         </tr>
     </ng-template>
-    <ng-template #body let-student styleClass="customTable">
+    <ng-template #body let-student let-expanded="expanded" styleClass="customTable">
         <tr class="contentRow">
             <td>{{ student.id }}</td>
             <td class="notWrap">{{ student.name }}</td>
@@ -77,16 +82,50 @@
             <td>{{ student.phoneNumber }}</td>
             <td>{{ student.address.homeAddress }}, {{ student.address.city }}, {{ student.address.country }}</td>
             <td>
-                <div class="expandCourse">
-                    <div *ngFor="let course of student.courses">{{ course.name }}</div>
+                <button pButton type="button" [pRowToggler]="student" pRipple icon="pi pi-chevron-down">
+                </button>
+            </td>
+            <!--td-->               
+                <!--pi-ellipsis-v-->
+                <div class="actionButton">
+                    <p-speeddial [model]="menuItems" direction="down" type="linear" showIcon="pi pi-ellipsis-v" hideIcon="pi pi-times" (click)="openMenu(student)">
+                    </p-speeddial>
+                </div>
+            <!--/td-->
+        </tr>
+    </ng-template>
+    <ng-template #expandedrow let-student>
+        <tr class="expandedTable">
+            <td>
+                <div>
+                    <p-table 
+                        [value]="student.courses" 
+                        dataKey="id" 
+                        >
+                        <ng-template #header>
+                            <tr class="headerRow">
+                                <th>
+                                    COURSE ENROLLEMENT:
+                                </th>
+                            </tr>
+                        </ng-template>
+                        <ng-template #body let-course>
+                            <tr class="coursesInOverview">
+                                <td>
+                                    {{ course.name }}
+                                </td>
+                            </tr>
+                        </ng-template>
+                        
+                    </p-table>
                 </div>
             </td>
         </tr>
     </ng-template>
-    <ng-template #paginatorleft>
+    <!--ng-template #paginatorleft>
         <p-button type="button" icon="pi pi-plus" text />
     </ng-template>
     <ng-template #paginatorright>
         <p-button type="button" icon="pi pi-cloud" text />
-    </ng-template>
+    </ng-template-->
 </p-table>
