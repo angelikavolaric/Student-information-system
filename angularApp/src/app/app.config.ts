@@ -3,8 +3,6 @@ import { provideRouter } from '@angular/router';
 import { routes } from './app.routes';
 import { providePrimeNG } from 'primeng/config';
 import Aura from '@primeuix/themes/aura';
-import { AuraBaseDesignTokens } from '@primeuix/themes/aura/base';
-import { Preset } from '@primeuix/themes/types';
 import { definePreset as primeDefinePreset } from '@primeuix/themes';
 
 const MyPreset = primeDefinePreset(Aura, {

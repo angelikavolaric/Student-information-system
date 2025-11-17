@@ -107,7 +107,6 @@ export class EditStudentComponent implements OnInit{
     }
 
     onSubmit(): void {
-   // this.selectedCourses = this.student.courses //asign new courses
       this.studentService.updateStudent(this.student).subscribe( //transform id numbers in course name
           (data: Student) => {
             console.log("Student sucessfuly updated")

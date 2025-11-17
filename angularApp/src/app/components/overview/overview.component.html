@@ -85,13 +85,10 @@
                 <button pButton type="button" [pRowToggler]="student" pRipple icon="pi pi-chevron-down">
                 </button>
             </td>
-            <!--td-->               
-                <!--pi-ellipsis-v-->
                 <div class="actionButton">
                     <p-speeddial [model]="menuItems" direction="down" type="linear" showIcon="pi pi-ellipsis-v" hideIcon="pi pi-times" (click)="openMenu(student)">
                     </p-speeddial>
                 </div>
-            <!--/td-->
         </tr>
     </ng-template>
     <ng-template #expandedrow let-student>
@@ -122,10 +119,4 @@
             </td>
         </tr>
     </ng-template>
-    <!--ng-template #paginatorleft>
-        <p-button type="button" icon="pi pi-plus" text />
-    </ng-template>
-    <ng-template #paginatorright>
-        <p-button type="button" icon="pi pi-cloud" text />
-    </ng-template-->
 </p-table>

@@ -34,6 +34,54 @@
         {
           "id": "0009",
           "name": "International Studies"
+        },
+        {
+          "id": "0001",
+          "name": "Accounting"
+        },
+        {
+          "id": "0002",
+          "name": "Biology"
+        },
+        {
+          "id": "0003",
+          "name": "Chemistry"
+        },
+        {
+          "id": "0004",
+          "name": "Design"
+        },
+        {
+          "id": "0010",
+          "name": "Languages"
+        },
+        {
+          "id": "0012",
+          "name": "Nursing and Healthcare"
+        },
+        {
+          "id": "0011",
+          "name": "Mathematics"
+        },
+        {
+          "id": "0014",
+          "name": "Religious Studies"
+        },
+        {
+          "id": "0015",
+          "name": "Software Engineering"
+        },
+        {
+          "id": "0016",
+          "name": "Textiles"
+        },
+        {
+          "id": "0017",
+          "name": "Visual Communications"
+        },
+        {
+          "id": "0013",
+          "name": "Philosophy"
         }
       ]
     },
@@ -129,35 +177,6 @@
         {
           "id": "0008",
           "name": "History"
-        }
-      ]
-    },
-    {
-      "id": "cbbf0100d60b00f4e8a41c1f",
-      "name": "Vera",
-      "surname": "Parsley",
-      "gender": "F",
-      "birthDate": "1997-04-27",
-      "email": "vp@email.com",
-      "phoneNumber": "012122250",
-      "address": {
-        "homeAddress": "Ferland street 40",
-        "postalCode": "4233",
-        "city": "Cookaroo",
-        "country": "Marinaland"
-      },
-      "courses": [
-        {
-          "id": "0011",
-          "name": "Mathematics"
-        },
-        {
-          "id": "0012",
-          "name": "Nursing and Healthcare"
-        },
-        {
-          "id": "0016",
-          "name": "Textiles"
         }
       ]
     },
@@ -1043,22 +1062,6 @@
           "name": "Software Engineering"
         }
       ]
-    },
-    {
-      "id": "79e2089ef62d48c69682a8e4",
-      "name": "Testa",
-      "surname": "Test",
-      "gender": "F",
-      "birthDate": "2000-12-12",
-      "email": "",
-      "phoneNumber": "",
-      "address": {
-        "homeAddress": "Flag 3",
-        "postalCode": "1234",
-        "city": "sdf",
-        "country": "s"
-      },
-      "courses": []
     },
     {
       "id": "475968549d304b1aba4f1c70",

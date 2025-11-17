@@ -24,7 +24,6 @@ nav{
     background-color: var(--p-primary-500);
     top: 0 !important;
     height: 15vh;
-    /*margin: 0 0 5vh 0 !important;*/
     padding: 1.5vh !important;
 }
 
@@ -33,15 +32,10 @@ nav{
 }
 
 td, th{
-    /*margin: 2ex;*/
     text-align:  left !important;
     padding-top: 2.5ex !important;
     padding-bottom: 2.5ex !important;
-    /*padding-left: 3ex !important;*/
-    /*padding-right: 3ex !important;*/
     border-color: #00000000 !important;
-   /* min-width: 7%;
-    max-width: 15%;*/
     overflow-wrap: break-word !important;
     display: table-cell;
 
@@ -54,7 +48,6 @@ td, th{
 th{
     text-align: left !important;
     font-weight: lighter !important;
-    /*padding: 0 !important;*/
     width: 100% !important;
     text-align: center !important;
 }
