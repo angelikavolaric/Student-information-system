@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import "primeicons/primeicons.css";
 html{
     padding: 0 !important;
     margin: 0 !important;
@@ -46,7 +47,7 @@ td, th{
 
 }
 
-.notWrap{ /*for cells we do not want broken (name, surname)*/
+.notWrap, p-message{ /*for cells we do not want broken (name, surname)*/
     white-space: nowrap !important;
 }
 
