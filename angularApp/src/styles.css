@@ -4,13 +4,13 @@ html{
     margin: 0 !important;
 }
 body{
-    background-color: #f0eff0;
+    background-color: var(--p-primary-10);/* #f0eff0;*/
     padding: 0;
     margin: 0;
     text-align: center !important;
     font-family: 'Open Sans';
     font-size: small;
-    color: white !important;
+    color: var(--p-primary-0) !important;
 }
 
 main{
@@ -19,10 +19,11 @@ main{
     font-size: 13px;
 }
 
-header{
-    background-color: #594859;
+nav{
+    background-color: var(--p-primary-500);
     top: 0 !important;
-    margin: 0 0 5vh 0 !important;
+    height: 15vh;
+    /*margin: 0 0 5vh 0 !important;*/
     padding: 1.5vh !important;
 }
 
@@ -58,9 +59,27 @@ th{
 }
 
 td{
-    color: #594859 !important; 
+    color: var(--p-primary-500); /*#594859 !important; */
     width: 100% !important;
     text-align: center !important;
+}
+
+input{
+    width: 100% !important;
+    top: 0 !important;
+    border-radius: 1ex !important;
+    display: flex !important;
+
+}
+
+/*button on sites /add and /eddit */
+.saveButtonFixed{ 
+    background: var(--p-green-700) !important;
+}
+
+.course-inputgroup { 
+  display: block !important;
+  align-items: center ;
 }
 
 
@@ -74,8 +93,8 @@ td{
 }
 
 .headerRow{
-    background-color: #6c5d6c !important;
-    color: white !important;
+    background-color: var(--p-primary-400) !important;/*#6c5d6c !important;*/
+    color: var(--p-primary-0) !important;
     padding: 2vh 0 2vh 0 !important;
 }
 
@@ -83,7 +102,7 @@ td{
     top: 0 !important;
     margin-top: 0 !important;
     padding: 0 !important;
-    background-color: #817681 !important;
+    background-color: var(--p-primary-350) !important;/*#817681 !important;*/
     border-radius: 0 0 1ex 1ex !important;
 }
 
@@ -98,13 +117,8 @@ td{
 
 }
 
-.p-paginator-page.p-paginator-page-selected {
-    background: #efeaef !important;
-    color: inherit !important;
-}
-
 .p-datatable-column-sorted .p-datatable-sort-icon, .p-datatable-sort-icon {
-    color: white !important
+    color: var(--p-primary-0) !important
 }
 
 .p-paginator-current {
