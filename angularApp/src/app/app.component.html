@@ -1,8 +1,16 @@
-
+<nav>
+  <div id="profile">
+    <h2 id="profileName">Student information system</h2>
+  </div>
+  <div id="navButton"> 
+    <button pButton [routerLink]="navButtonRoute">{{navButtonDisplay}}</button>
+    <button pButton [routerLink]="'/overview'">Student overview</button>
+  </div>
+</nav>
 <main class="main">
-    <router-outlet />
+  <router-outlet />
 
 </main>
 
-
+<footer></footer>
 

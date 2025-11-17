@@ -1,4 +1,4 @@
-import { Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { AddStudentComponent } from './components/add-student/add-student.component';
 import { DeleteStudentComponent } from './components/delete-student/delete-student.component';
 import { EditStudentComponent } from './components/edit-student/edit-student.component';
