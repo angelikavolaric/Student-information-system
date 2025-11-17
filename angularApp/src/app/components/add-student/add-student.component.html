@@ -8,7 +8,6 @@
     <ng-template #header></ng-template>
     <ng-template #body let-student>
         <tr class="headerRow">
-            <th>ID</th>
             <th>NAME</th>
             <th>SURNAME</th> 
             <th>GENDER</th>
@@ -17,8 +16,6 @@
             <th>PHONE</th> 
         </tr>
         <tr *ngIf="errMsgs.length == 0" class="contentRow">
-            <!--td>{{ student.id }}</td-->
-            
             <td><p-inputgroup class="vertical-inputgroup">
                 <input 
                     pInputText 
@@ -32,7 +29,6 @@
                 @if (name.invalid && (name.touched || submitted)) {
                 <p-message severity="error" size="small" variant="simple">Name is required.</p-message>
                 }
-
             </p-inputgroup></td>
             <td><p-inputgroup class="vertical-inputgroup">
                 <input 
@@ -56,12 +52,16 @@
                     #gender="ngModel" 
                     maxlength="1" 
                     placeholder="M/F" 
+                    pattern="^(M|F|m|f)"
                     style="text-transform:uppercase" 
                     [(ngModel)]="student.gender" 
                     required  
                     [invalid]="gender.invalid && (gender.touched || submitted)"/>
-                @if (gender.invalid && (gender.touched || submitted)) {
+                @if (gender.model == "" && (gender.touched || submitted)) {
                 <p-message severity="error" size="small" variant="simple">Gender is required.</p-message>
+                }
+                @if ( gender.model != "" && gender.invalid && submitted) {
+                <p-message severity="error" size="small" variant="simple">Gender can be only M or F</p-message>
                 }
             </p-inputgroup></td>
             <td><p-inputgroup class="vertical-inputgroup">
@@ -86,11 +86,12 @@
                     #email="ngModel" 
                     placeholder="example@example.com" 
                     [(ngModel)]="student.email" 
-                    [invalid]="email.invalid && (email.touched || submitted)"/>
+                    pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$"
+                    [invalid]="email.invalid && submitted"/>
                 @if (email.invalid) {
                 <p-message severity="error" size="small" variant="simple">Email is not valid.</p-message>
                 }
-                @if (email.hasError('checkValues')) {
+                @if (email.hasError('checkValues()')) {
                     Please enter a valid email.
                 }
             </p-inputgroup></td>
@@ -98,8 +99,15 @@
                 <input 
                     pInputText 
                     type="tel" 
+                    name="phone"
+                    #phone="ngModel"
+                    pattern="^[0-9]{6,}"
                     placeholder="012345678" 
-                    [(ngModel)]="student.phoneNumber" />
+                    [(ngModel)]="student.phoneNumber"
+                    [invalid]="phone.invalid" />
+                @if (phone.invalid) {
+                <p-message severity="error" size="small" variant="simple">Phone is not valid.</p-message>
+                }
             </p-inputgroup></td>
         </tr>
         <!--br-->
@@ -111,15 +119,14 @@
             <th>POSTAL CODE</th>
             <th>CITY</th>
             <th>COUNTRY</th>
-        </tr>
-        
+        </tr>        
         <tr class="contentRow"> 
             <td><p-inputgroup class="vertical-inputgroup">
                 <input 
                     pInputText 
                     type="text" 
                     #street="ngModel" 
-                    placeholder="street, house number" 
+                    placeholder="street and house number" 
                     [(ngModel)]="student.address.homeAddress" 
                     required 
                     [invalid]="street.invalid && (street.touched || submitted)"/>
@@ -147,10 +154,14 @@
                     #city="ngModel" 
                     placeholder="Montana" 
                     [(ngModel)]="student.address.city" 
+                    pattern="^[a-zA-Z' ']*"
                     required 
                     [invalid]="city.invalid && (city.touched || submitted)"/>
-                @if (city.invalid && (city.touched || submitted)) {
+                @if (city.model == "" && (city.touched || submitted)) {
                 <p-message severity="error" size="small" variant="simple">City is required.</p-message>
+                }
+                @if (city.model != "" && city.invalid) {
+                <p-message severity="error" size="small" variant="simple">City cannot have numbers.</p-message>
                 }
             </p-inputgroup></td>                
             <td><p-inputgroup class="vertical-inputgroup">
@@ -159,15 +170,18 @@
                     type="text" 
                     #country="ngModel" 
                     placeholder="USA" 
+                    pattern="^[a-zA-Z' ']*"
                     [(ngModel)]="student.address.country" 
                     required 
                     [invalid]="country.invalid && (country.touched || submitted)"/>
-                @if (country.invalid && (country.touched || submitted)) {
+                @if (country.model == "" && (country.touched || submitted)) {
                 <p-message severity="error" size="small" variant="simple">Country is required.</p-message>
+                }
+                @if (country.model != "" && country.invalid) {
+                <p-message severity="error" size="small" variant="simple">Country cannot have numbers.</p-message>
                 }
             </p-inputgroup></td>
         </tr>
-
         <tr class="headerWithSub headerRow">
             <th colspan="3" rowspan="2">COURSES</th>
         </tr>
@@ -188,17 +202,20 @@
                 {{ course.id }}
             </td>
             <td>
-                <!--label [for]="course.name" class="ml-2"> {{ course.id }} </label-->
                 {{ course.name }}
-            </td>
-
-            
+            </td>            
         </tr>
+        <p-toast />
+        <p-dialog header="Add another student?" [modal]="true" [(visible)]="addStudentPopup">
+            <button pButton (click)="reloadPage()">
+                <span pButtonLabel>Yes</span>
+            </button>
+            <button pButton [routerLink]="'/overview'" severity="secondary">
+                <span pButtonLabel>No</span>
+            </button>
+        </p-dialog>
 
-        <button pButton *ngIf="errMsgs.length == 0; disabled" type="submit" (click)="onSubmit()" class="saveButtonFixed" style=" z-index: 100">
+        <button pButton *ngIf="errMsgs.length == 0;" type="submit" (click)="onSubmit()" class="saveButtonFixed" >
             <span pButtonLabel>Save</span>
         </button>
-
-    
-
     </ng-template>    

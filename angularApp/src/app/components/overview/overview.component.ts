@@ -15,6 +15,7 @@ import { TableModule } from 'primeng/table';
   styleUrl: './overview.component.css'
 })
 export class OverviewComponent {
+
   error: any;
   selectedStudent: Student = {id:"", name:"", surname:"", gender:"M", birthDate:"", email:"", phoneNumber:"", 
     address: {homeAddress:"", postalCode:"", city:"", country:""}, courses:[]};

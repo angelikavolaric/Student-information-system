@@ -1,5 +1,5 @@
 <p-message *ngIf="errMsgs.length > 0" severity="error">{{ error }} 
-    <a href="overview">go to student overview</a>
+    <a [routerLink]="'/overview'">go to student overview</a>
 </p-message>
 <p-table 
     [value]="[student]" 
@@ -35,6 +35,7 @@
             <span pButtonLabel>Delete student</span>
         </p-button>
 
+        <p-toast />
         <p-dialog header="WARNING" [modal]="true" [(visible)]="visible">
             <p>Are you sure you want to delete the student?</p>
             <button pButton  type="delete" (click)="deleteStudent()" class="deleteButtonFixed">
@@ -42,5 +43,13 @@
             </button>
             
         </p-dialog>
+        <p-dialog header="Go back to student overview" [modal]="true" [(visible)]="routingPopup">
+            <p></p>
+            <button pButton [routerLink]="'/overview'">
+                <span pButtonLabel>Student overview</span>
+            </button>
+            
+        </p-dialog>
+        
         
     </ng-template>    
