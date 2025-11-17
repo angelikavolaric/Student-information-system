@@ -13,15 +13,29 @@ import { FormsModule } from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
 import { Course } from '../../classes/course';
 import { CheckboxModule } from 'primeng/checkbox';
-
+import { ToastModule } from 'primeng/toast';
+import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-edit-student',
-  imports: [CommonModule, ButtonModule, TableModule, MessageModule, InputGroupModule, InputGroupAddonModule, FormsModule, InputTextModule, CheckboxModule],
+  providers: [MessageService],
+  imports: [
+    CommonModule, 
+    ButtonModule, 
+    TableModule, 
+    MessageModule, 
+    InputGroupModule, 
+    InputGroupAddonModule, 
+    FormsModule, 
+    InputTextModule, 
+    CheckboxModule,
+    ToastModule,
+    ],
   templateUrl: './edit-student.component.html',
   styleUrl: './edit-student.component.css'
 })
 export class EditStudentComponent implements OnInit{
+
 
   studentId = "";
   student: Student = {id:"", name:"", surname:"", gender:"M", birthDate: "", email:"", phoneNumber:"", 
@@ -31,8 +45,16 @@ export class EditStudentComponent implements OnInit{
 
   errMsgs: any[] = [];
 
-   showWarning() {
+  showWarning() {
     this.errMsgs = [{ severity: 'warn', summary: 'Warning', detail: this.error }];
+  }
+
+  showSuccess() {
+  this.messageService.add({severity:'success', summary:'Success', detail:'Succesfully saved student'});
+  }
+
+  showFail() {
+    this.messageService.add({severity:'error', summary:'Error', detail:'Edit student failed'});
   }
 
 
@@ -40,6 +62,7 @@ export class EditStudentComponent implements OnInit{
     private readonly route: ActivatedRoute,
     private studentService: StudentService,
     private courseService: CourseService,
+    private messageService: MessageService,
   ) { }
 
   ngOnInit(): void {
@@ -88,8 +111,10 @@ export class EditStudentComponent implements OnInit{
       this.studentService.updateStudent(this.student).subscribe( //transform id numbers in course name
           (data: Student) => {
             console.log("Student sucessfuly updated")
+            this.showSuccess()
           },(err) => {
             console.error('Error course data:', err);
+            this.showFail()
             this.error = err;
           }
          )

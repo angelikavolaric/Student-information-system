@@ -56,7 +56,8 @@
             </td>
         </tr>
 
-        <button pButton *ngIf="errMsgs.length == 0" type="submit" (click)="onSubmit()" class="saveButtonFixed" style=" z-index: 100">
+        <p-toast />
+        <button pButton *ngIf="errMsgs.length == 0" type="submit" (click)="onSubmit()" class="saveButtonFixed">
             <span pButtonLabel>Save</span>
         </button>
 
