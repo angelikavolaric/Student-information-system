@@ -31,9 +31,9 @@
         </tr>
        
         
-        <p-button *ngIf="errMsgs.length == 0" class="deleteButtonFixed" (click)="deleteStudentPopup()">
+        <button pButton *ngIf="errMsgs.length == 0" class="deleteButtonFixed" (click)="deleteStudentPopup()">
             <span pButtonLabel>Delete student</span>
-        </p-button>
+        </button>
 
         <p-toast />
         <p-dialog header="WARNING" [modal]="true" [(visible)]="visible">

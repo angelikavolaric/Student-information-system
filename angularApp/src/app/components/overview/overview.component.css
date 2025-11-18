@@ -4,10 +4,19 @@
     
 }
 
-button, .p-speeddial-button.p-button-icon-only.p-button-rounded, .p-speeddial {
+button{
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    margin: 0;
+
+}
+
+button, .p-speeddial-button.p-button-icon-only.p-button-rounded, .p-speeddial, .rowButton {
     background-color: var(--p-primary-100) !important;
     border-color: var(--p-primary-100) !important;
     color: var(--p-primary-500) !important;
+
 }
 
 .expandedTable .headerRow{
@@ -29,15 +38,15 @@ button, .p-speeddial-button.p-button-icon-only.p-button-rounded, .p-speeddial {
 .actionButton{
     display: flex !important;
     right: 10px !important;
-    padding: 5.5ex 0 0 0 !important;
+    padding: 2.5ex 0 0 0 !important;
     margin: 0 !important;
     position: absolute !important;
-    height: 10px;
+    height: 10px !important;
 }
 
 .actionButton p-speeddial{
     position: relative !important;
-    height: 10px !important;
+    height: 5px !important;
     left: 'calc(50% - 2rem)';
     bottom: 0 !important;
 }
