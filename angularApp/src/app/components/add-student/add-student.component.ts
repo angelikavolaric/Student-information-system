@@ -48,7 +48,7 @@ export class AddStudentComponent {
   allCourses: Course[] = []
   submitted = false
 
-  todayDate = new Date().toISOString().split('T')[0];
+  todayDate = new Date().toISOString().split('T')[0]; //to validate birthday
 
   errMsgs: any[] = [];
   router: any;
@@ -118,14 +118,12 @@ export class AddStudentComponent {
 
     onSubmit(): void {
       this.submitted = true
-      console.log(this.student)
       this.student.gender = this.student.gender.toUpperCase() //if gender is lowercase - change
       
       if(this.validInputs()){
         this.studentService.addStudent(this.student).subscribe( //transform id numbers in course name
           (data: Student) => {
             this.showSuccess()
-            console.log("Student sucessfuly added")
             this.addStudentPopup = true
           },(err) => {
             console.error('Error course data:', err);

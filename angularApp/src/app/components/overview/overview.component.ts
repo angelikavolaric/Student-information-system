@@ -39,12 +39,10 @@ export class OverviewComponent {
   
   currentPage = 1;
   first= 1; //index of first shown on page
- // totalRecords = this.students.length
-
   constructor(private studentService: StudentService,
-    private messageService: MessageService,
   ){}
 
+  //paginator
   reset(): boolean {
     return this.currentPage === 1;
   }
@@ -72,6 +70,7 @@ export class OverviewComponent {
     }
   }
 
+  //row expansion
   expandedRows: { [key: string]: boolean } = {};
 
   onRowExpand(student: any){
@@ -82,16 +81,13 @@ export class OverviewComponent {
     this.expandedRows[student.id] = false;
   }
 
-  openMenu(student: Student){
+  openMenu(student: Student){ //more button
     this.menuItems = [
             {
                 label: 'Edit',
                 icon: "pi pi-pencil",
                 command: () => {
-                  console.log(student)
                   this.router.navigate(['/edit', student.id]);
-
-                  // this.editStudent(student)
                 }
                
             },
@@ -107,8 +103,6 @@ export class OverviewComponent {
 
   ngOnInit(): void {
 
-
-    
    this.studentService.getAllStudents().subscribe(
           (data: Student[]) => {
             this.students = data

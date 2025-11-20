@@ -1,7 +1,7 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Student } from '../../classes/student';
 import { StudentService } from '../../services/student.service';
-import { ActivatedRoute, Router, RouterModule } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 import { MessageModule } from 'primeng/message';
@@ -32,8 +32,8 @@ export class DeleteStudentComponent implements OnInit{
     address: {homeAddress:"", postalCode:"", city:"", country:""}, courses:[]};
   error = "";
   errMsgs: any[] = [];
-  visible = false;
-  routingPopup = false;
+  visible = false; //popup for checking if you want to delete student
+  routingPopup = false; //popup for going to ovrview
   
   constructor(
       private readonly route: ActivatedRoute,
@@ -53,7 +53,7 @@ export class DeleteStudentComponent implements OnInit{
       
     this.route.paramMap.subscribe(params => {  
       let tempId = params.get('id');
-      if(tempId != null){
+      if(tempId != null){ //check if no student id
         this.studentId = tempId
       } else {
         this.error = "Student id is not valid, cannot fetch data"
@@ -75,13 +75,11 @@ export class DeleteStudentComponent implements OnInit{
   }
 
   deleteStudent(){
-    console.log("deleteStudent")
     this.studentService.deleteStudent(this.student).subscribe( //transform id numbers in course name
       (data: Student) => {
-        console.log("Student sucessfuly deleted")
         this.showSuccess()
         this.visible = false
-        this.routingPopup = true
+        this.routingPopup = true 
       },(err) => {
         console.error('Error course data:', err);
         this.showWarning()

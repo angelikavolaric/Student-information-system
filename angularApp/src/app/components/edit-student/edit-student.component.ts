@@ -109,7 +109,6 @@ export class EditStudentComponent implements OnInit{
     onSubmit(): void {
       this.studentService.updateStudent(this.student).subscribe( //transform id numbers in course name
           (data: Student) => {
-            console.log("Student sucessfuly updated")
             this.showSuccess()
           },(err) => {
             console.error('Error course data:', err);
