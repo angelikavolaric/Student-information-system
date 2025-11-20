@@ -3,10 +3,13 @@ Student information system
 How to run:
 
 Clone repository `git clone https://github.com/angelikavolaric/Student-information-system.git`
+
 Navigate to directory angularApp
-Run two terminals
+
+Run two terminals.
 
 In first terminal run: `npm install` and then `ng serve`
+
 In second terminal run: `npx json-server src/assets/data/db.json`
 
 Open `http://localhost:4200` to view it in the browser.
