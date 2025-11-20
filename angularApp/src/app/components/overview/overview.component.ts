@@ -38,7 +38,7 @@ export class OverviewComponent {
 
   
   currentPage = 1;
-  first= 1; //index of first shown on page
+  first= 0; //index of first shown on page
   constructor(private studentService: StudentService,
   ){}
 
