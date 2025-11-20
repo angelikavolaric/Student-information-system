@@ -28,36 +28,12 @@
           "name": "Fine Art"
         },
         {
-          "id": "0005",
-          "name": "Engineering"
-        },
-        {
           "id": "0009",
           "name": "International Studies"
         },
         {
-          "id": "0001",
-          "name": "Accounting"
-        },
-        {
-          "id": "0002",
-          "name": "Biology"
-        },
-        {
-          "id": "0003",
-          "name": "Chemistry"
-        },
-        {
-          "id": "0004",
-          "name": "Design"
-        },
-        {
           "id": "0010",
           "name": "Languages"
-        },
-        {
-          "id": "0012",
-          "name": "Nursing and Healthcare"
         },
         {
           "id": "0011",
@@ -78,10 +54,6 @@
         {
           "id": "0017",
           "name": "Visual Communications"
-        },
-        {
-          "id": "0013",
-          "name": "Philosophy"
         }
       ]
     },

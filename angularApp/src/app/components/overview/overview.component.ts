@@ -7,15 +7,17 @@ import { TableModule } from 'primeng/table';
 import { SpeedDialModule } from 'primeng/speeddial';
 import { MenuItem, MessageService } from 'primeng/api';
 import { Router } from '@angular/router';
+import { PaginatorModule } from 'primeng/paginator';
 
 @Component({
   selector: 'app-overview',
-  providers: [MessageService,],
+  providers: [MessageService],
   imports: [
     CommonModule, 
     ButtonModule, 
     TableModule,
     SpeedDialModule,
+    PaginatorModule,
   ],
   templateUrl: './overview.component.html',
   styleUrl: './overview.component.css'
@@ -36,7 +38,8 @@ export class OverviewComponent {
 
   
   currentPage = 1;
-  first= 0; //index of first shown on page
+  first= 1; //index of first shown on page
+ // totalRecords = this.students.length
 
   constructor(private studentService: StudentService,
     private messageService: MessageService,

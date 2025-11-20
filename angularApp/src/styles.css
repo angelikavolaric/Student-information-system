@@ -119,6 +119,7 @@ input{
 .p-paginator-current {
     float: left !important;
     left: 0 !important;
+    display: absolute !important;
 }
 
 

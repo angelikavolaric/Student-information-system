@@ -10,17 +10,16 @@
     [expandedRowKeys]="expandedRows"
     (onRowExpand)="onRowExpand($event)" 
     (onRowCollapse)="onRowCollapse($event)"
-
-    [value]="students"
-    [paginator]="true"
+    [value]="students"   
+    stripedRows    
+    [tableStyle]="{ 'min-width': '50rem', 'table-layout': 'auto', 'width': '100%'}"
     [rows]=rows
     [first]="first"
-    stripedRows
-    [showCurrentPageReport]="true"
-    [tableStyle]="{ 'min-width': '50rem', 'table-layout': 'auto', 'width': '100%'}"
-    currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
     (onPage)="pageChange($event)"
     [rowsPerPageOptions]="[10, 25, 50, 100]"
+    [paginator]="true"
+    currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+    [showCurrentPageReport]="true"
 >
     <ng-template #header>
         <tr class="headerRow">
@@ -128,5 +127,6 @@
                 </div>
             </td>
         </tr>
+        
     </ng-template>
 </p-table>
